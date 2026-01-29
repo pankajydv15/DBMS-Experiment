@@ -1,6 +1,6 @@
 # MySQL Basic Commands (Beginner Guide)
 
-Ye file **MySQL / MariaDB ke basic commands** cover karti hai — bilkul **`SHOW DATABASES;`** se start karke daily-use commands tak. Ye **DBMS lab, viva, practice** ke liye perfect hai.
+This file covers **basic MySQL / MariaDB commands** — starting from **`SHOW DATABASES;`** up to commonly used daily commands. It is perfect for **DBMS lab work, viva preparation, and practice**.
 
 ---
 
@@ -10,25 +10,25 @@ Ye file **MySQL / MariaDB ke basic commands** cover karti hai — bilkul **`SHOW
 SHOW DATABASES;
 ```
 
-> Server me jitne bhi databases hain unki list dikhata hai.
+> Displays the list of all databases available on the server.
 
 ```sql
 CREATE DATABASE company;
 ```
 
-> Naya database create karta hai.
+> Creates a new database.
 
 ```sql
 USE company;
 ```
 
-> Kaam karne ke liye database select karta hai.
+> Selects a database to work with.
 
 ```sql
 DROP DATABASE company;
 ```
 
-> Poora database permanently delete kar deta hai.
+> Permanently deletes the database.
 
 ---
 
@@ -38,7 +38,7 @@ DROP DATABASE company;
 SHOW TABLES;
 ```
 
-> Current database ki saari tables dikhata hai.
+> Displays all tables in the currently selected database.
 
 ```sql
 CREATE TABLE student (
@@ -48,19 +48,19 @@ CREATE TABLE student (
 );
 ```
 
-> Nayi table create karta hai.
+> Creates a new table.
 
 ```sql
 DESC student;
 ```
 
-> Table ka structure dikhata hai (columns + data types).
+> Shows the structure of the table (columns and data types).
 
 ```sql
 DROP TABLE student;
 ```
 
-> Table ko permanently delete karta hai.
+> Permanently deletes the table.
 
 ---
 
@@ -70,7 +70,7 @@ DROP TABLE student;
 INSERT INTO student VALUES (1, 'Rahul', 20);
 ```
 
-> Table me ek record insert karta hai.
+> Inserts a single record into the table.
 
 ```sql
 INSERT INTO student VALUES
@@ -78,7 +78,7 @@ INSERT INTO student VALUES
 (3, 'Neha', 22);
 ```
 
-> Multiple records ek saath insert karta hai.
+> Inserts multiple records at once.
 
 ---
 
@@ -88,19 +88,19 @@ INSERT INTO student VALUES
 SELECT * FROM student;
 ```
 
-> Table ka poora data dikhata hai.
+> Displays all records from the table.
 
 ```sql
 SELECT name, age FROM student;
 ```
 
-> Sirf selected columns dikhata hai.
+> Displays only the selected columns.
 
 ```sql
 SELECT * FROM student WHERE age > 20;
 ```
 
-> Condition ke according data fetch karta hai.
+> Fetches data based on a condition.
 
 ---
 
@@ -110,7 +110,7 @@ SELECT * FROM student WHERE age > 20;
 UPDATE student SET age = 23 WHERE id = 2;
 ```
 
-> Existing record update karta hai.
+> Updates an existing record.
 
 ---
 
@@ -120,13 +120,13 @@ UPDATE student SET age = 23 WHERE id = 2;
 DELETE FROM student WHERE id = 1;
 ```
 
-> Specific record delete karta hai.
+> Deletes a specific record.
 
 ```sql
 TRUNCATE TABLE student;
 ```
 
-> Table ka poora data delete karta hai (structure safe rehta hai).
+> Deletes all records from the table (table structure remains intact).
 
 ---
 
@@ -136,19 +136,19 @@ TRUNCATE TABLE student;
 ALTER TABLE student ADD marks INT;
 ```
 
-> Table me naya column add karta hai.
+> Adds a new column to the table.
 
 ```sql
 ALTER TABLE student MODIFY name VARCHAR(50);
 ```
 
-> Column ka data type change karta hai.
+> Modifies the data type of a column.
 
 ```sql
 ALTER TABLE student DROP marks;
 ```
 
-> Column delete karta hai.
+> Deletes a column from the table.
 
 ---
 
@@ -161,7 +161,7 @@ CREATE TABLE department (
 );
 ```
 
-> PRIMARY KEY example.
+> Example of PRIMARY KEY.
 
 ```sql
 CREATE TABLE employee (
@@ -172,7 +172,7 @@ CREATE TABLE employee (
 );
 ```
 
-> FOREIGN KEY example.
+> Example of FOREIGN KEY.
 
 ---
 
@@ -182,37 +182,32 @@ CREATE TABLE employee (
 SELECT DATABASE();
 ```
 
-> Currently selected database ka naam dikhata hai.
+> Displays the name of the currently selected database.
 
 ```sql
 SHOW COLUMNS FROM student;
 ```
 
-> Table ke columns dikhata hai.
+> Displays the columns of the table.
 
 ```sql
 EXIT;
 ```
 
-> MySQL se bahar nikalne ke liye.
+> Exits from MySQL.
 
 ---
 
 ## 🔟 Notes for Lab & Viva
 
-* `;` lagana **mandatory** hai
-* SQL **case-insensitive** hoti hai
-* `DROP` dangerous hota hai (undo nahi hota)
-* `DESC` lab exams me kaafi pucha jata hai
+* Using `;` at the end of commands is **mandatory**
+* SQL is **case-insensitive**
+
 
 ---
 
-✅ **Tip:** Is file ko tum VS Code / GitHub / Notepad me open kar sakte ho.
 
-Agar chaho to next:
 
-* JOIN commands
-* Aggregate functions (SUM, AVG, COUNT)
-* Viva questions
+
 
 
