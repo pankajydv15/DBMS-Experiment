@@ -1,10 +1,10 @@
 # MySQL Basic Commands (Beginner Guide)
 
-This file covers **basic MySQL / MariaDB commands** — starting from **`SHOW DATABASES;`** up to commonly used daily commands. It is perfect for **DBMS lab work, viva preparation, and practice**.
+This file covers **basic MySQL / MariaDB commands** — starting from **`SHOW DATABASES;`** up to commonly used daily commands. 
 
 ---
 
-## 1️⃣ Database Related Commands
+## 1️ Database Related Commands
 
 ```sql
 SHOW DATABASES;
@@ -32,7 +32,7 @@ DROP DATABASE company;
 
 ---
 
-## 2️⃣ Table Related Commands
+## 2️ Table Related Commands
 
 ```sql
 SHOW TABLES;
@@ -64,7 +64,7 @@ DROP TABLE student;
 
 ---
 
-## 3️⃣ INSERT Commands
+## 3️ INSERT Commands
 
 ```sql
 INSERT INTO student VALUES (1, 'Rahul', 20);
@@ -104,7 +104,7 @@ SELECT * FROM student WHERE age > 20;
 
 ---
 
-## 5️⃣ UPDATE Command
+## 5️ UPDATE Command
 
 ```sql
 UPDATE student SET age = 23 WHERE id = 2;
@@ -114,7 +114,7 @@ UPDATE student SET age = 23 WHERE id = 2;
 
 ---
 
-## 6️⃣ DELETE & TRUNCATE
+## 6️ DELETE & TRUNCATE
 
 ```sql
 DELETE FROM student WHERE id = 1;
@@ -130,7 +130,7 @@ TRUNCATE TABLE student;
 
 ---
 
-## 7️⃣ ALTER TABLE Commands
+## 7️ ALTER TABLE Commands
 
 ```sql
 ALTER TABLE student ADD marks INT;
@@ -152,7 +152,7 @@ ALTER TABLE student DROP marks;
 
 ---
 
-## 8️⃣ Constraints (Basics)
+## 8️ Constraints (Basics)
 
 ```sql
 CREATE TABLE department (
@@ -176,7 +176,7 @@ CREATE TABLE employee (
 
 ---
 
-## 9️⃣ Useful Utility Commands
+## 9️ Useful Utility Commands
 
 ```sql
 SELECT DATABASE();
@@ -198,7 +198,7 @@ EXIT;
 
 ---
 
-## 🔟 Notes for Lab & Viva
+##  Notes for Lab 
 
 * Using `;` at the end of commands is **mandatory**
 * SQL is **case-insensitive**
